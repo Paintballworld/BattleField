@@ -25,13 +25,12 @@ public interface Field {
     /**
      * Returns an int value which represents a numeric
      * value of strength of the block in position (x, y)
-     * @param x - X value of requesting block
-     * @param y - Y value of requesting block
+     * @param position - position value of requesting block
      * @return max_value..1 value if there is a block in a (x, y)
      * position and 0 if there is no block,
      * where max_value is defined by application
      */
-    int getCellstrength(int x, int y);
+    int getCellstrength(Position position);
 
     /**
      * Returns a position, representing location of a flag

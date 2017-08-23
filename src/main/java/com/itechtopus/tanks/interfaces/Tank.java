@@ -76,4 +76,9 @@ public interface Tank {
      */
     boolean canGo(Direction direction);
 
+    /**
+     * @return true if tank is alive and false if not
+     */
+    boolean isAlive();
+
 }
