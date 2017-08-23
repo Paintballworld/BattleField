@@ -15,7 +15,7 @@ public interface Tanker extends Runnable{
     /**
      * Method to set a game engine link
      */
-    void getEngine(GameEngine gameEngine);
+    void setGameEngine(GameEngine gameEngine);
 
     /**
      * Method must return a player's name
@@ -35,6 +35,9 @@ public interface Tanker extends Runnable{
      */
     String getTankName();
 
+    /**
+     * Main game functionality goes here
+     */
     @Override
     void run();
 }

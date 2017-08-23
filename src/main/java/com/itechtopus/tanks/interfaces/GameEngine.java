@@ -4,7 +4,6 @@ import java.util.List;
 
 public interface GameEngine {
 
-
     /**
      * Method to get a list of TankInfo's
      * representing tanks which are yet alive
