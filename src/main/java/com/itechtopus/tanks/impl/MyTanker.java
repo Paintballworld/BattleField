@@ -32,6 +32,7 @@ public class MyTanker implements Tanker {
     @Override
     public void setGameEngine(GameEngine gameEngine) {
         this.engine = gameEngine;
+        this.field = gameEngine.getField();
     }
 
     @Override
