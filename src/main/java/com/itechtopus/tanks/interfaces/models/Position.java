@@ -9,6 +9,12 @@ public interface Position {
      */
     Position getPositionAhead();
 
+    /**
+     * To know if current position is an exact absolute position
+     * meaning not in a middle between two cells
+     * @return true if position is exact and false if not
+     */
+    boolean isInPosition();
 
     /**
      * Return a Position of hypothetical movement to passed direction
