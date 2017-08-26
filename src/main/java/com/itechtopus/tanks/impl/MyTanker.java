@@ -54,14 +54,21 @@ public class MyTanker implements Tanker {
     public void run() {
         while (tank.isAlive()) {
             Random random = new Random(System.currentTimeMillis());
-            if (random.nextInt(40) == 1) {
+
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            if (random.nextInt(400) == 1) {
                 if (random.nextBoolean())
                     tank.turnLeft();
                 else
                     tank.turnRight();
             }
 
-            if (random.nextInt(50) == 1) {
+            if (random.nextInt(500) == 1) {
                 if (random.nextBoolean())
                     tank.stop();
                 else
@@ -72,7 +79,7 @@ public class MyTanker implements Tanker {
                 tank.fire();
             }
 
-            if (field.getCellstrength(tank.getPosition().getPositionAhead()) > 0)
+            if (field.getCellstrength(tank.getPosition().getPositionAhead()) > 0 )
                 tank.fire();
         }
     }
