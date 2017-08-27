@@ -36,7 +36,7 @@ public interface Tanker extends Runnable{
     String getTankName();
 
     /**
-     * Main game functionality goes here
+     * Main game process goes here
      */
     @Override
     void run();

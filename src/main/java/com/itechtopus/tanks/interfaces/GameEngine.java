@@ -20,10 +20,14 @@ public interface GameEngine {
     Field getField();
 
     /**
-     * To get a value of the current score
-     * @param player - Tanker instance (must be "this");
      * @return an int value, representing a number of
      * player remaining lives
      */
-    int getPlayerLifesLeft(Tanker player);
+    int getMyLifesLeft();
+
+    /**
+     * @return an int value, representing a number of
+     * player's opponent remaining lives
+     */
+    int getEnemyLifesLeft();
 }
