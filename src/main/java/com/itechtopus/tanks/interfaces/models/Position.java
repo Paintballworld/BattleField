@@ -86,6 +86,16 @@ public interface Position {
     Direction getDirection();
 
     /**
+     * @return a X component of Position (middle-point)
+     */
+    int getX();
+
+    /**
+     * @return a Y component of Position (middle-point)
+     */
+    int getY();
+
+    /**
      * @return X - X coordinate of the leftmost point of
      * this object
      */

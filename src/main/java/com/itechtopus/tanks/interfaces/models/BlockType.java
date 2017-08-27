@@ -1,6 +1,5 @@
 package com.itechtopus.tanks.interfaces.models;
 
-public enum ModelType {
-    TANK, WALL, BULLET;
-
+public enum BlockType {
+    BRICK, STONE;
 }

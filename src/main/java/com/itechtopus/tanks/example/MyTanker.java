@@ -1,4 +1,4 @@
-package com.itechtopus.tanks.impl;
+package com.itechtopus.tanks.example;
 
 import com.itechtopus.tanks.interfaces.field.Field;
 import com.itechtopus.tanks.interfaces.GameEngine;
