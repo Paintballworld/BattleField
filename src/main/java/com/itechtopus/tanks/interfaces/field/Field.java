@@ -37,20 +37,5 @@ public interface Field {
      */
     Position getFlagPosition(int tankId);
 
-    /**
-     * Get the farthest position which this tank can go
-     * @return a Position instance
-     */
-    Position getFarthestPosition();
-
-    /**
-     * Return a Position of hypothetical movement to passed direction
-     * THIS coordinates are not mentioned to change
-     * @return a Pos instance
-     */
-    Position getFarthestPosition(Direction direction);
-
-
-
 
 }
