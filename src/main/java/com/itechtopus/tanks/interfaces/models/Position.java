@@ -20,7 +20,7 @@ public interface Position {
          The Position (as a class) holds an information of all
          blocks which the object is built of, considering NOT only
          upper-left coordinates of blocks. For example:
-         If the coordinates of tank's center are (4, 3) (pic 1), then it's "body" is located
+         If the coordinates of tank's center are (4, 3) (pic5), then it's "body" is located
          from 2 up to 6 (!) on X axis, and from 1 to 5 (!) by the y
          axis. Because the tank is represented by a matrix of 4*4 blocks
          Leftmost block is in coordinates (2, 1) and bottom right corner
@@ -33,13 +33,13 @@ public interface Position {
 
          Bullet goes on exact axises. When a bullet hits a target it
          affects on both sides of an axis.
-         For example if a bullet, goes by y = 4 (upwards), when it reaches
+         For example if a bullet, goes by x = 4 (upwards), when it reaches
          a wall of bricks it crushes every block which upper-left point is
-         from 2 to 5. But when the bullet reaches a tank, the tank block
-         matrix must be in bullet.x - 1, bullet.x. Meaning that, example
-         when the bullet goes by y = 4, it hits tank only if any of tank's
-         blocks is in x = 3, or x = 4. Otherwise - tank bullet doesn't reach
-         the tank
+         from x = 2 to x = 5 (pic3). But when the bullet reaches a tank, the
+         tank block matrix must be in bullet.x - 1 .. bullet.x. Meaning that,
+         in that example, where the bullet goes by x = 4, it hits tank only i
+         f any of tank's blocks is in x = 3, or x = 4. Otherwise - tank bullet
+         doesn't reach the tank (pic4)
      */
 
     /*
@@ -67,6 +67,16 @@ public interface Position {
         getMaxX() вернет 6,
         getMinY() вернет 1,
         getMaxY() вернет 5.
+
+        Снаряд летит непосредственно по осям. Когда снаряд попадает в цель
+        он создает уров по обеим сторонам от оси.
+        Например, если снаряд летит по x = 4 (вверх), когда он достигнет
+        кирпичной стены, он ломает каждый блок, верхняя-левая точка которого
+        от x = 2 до x = 5 (рис3). Но когда снаряд попадает в танк, блок
+        матрица танка должен быть в диапазоне от bullet.x - 1 .. bullet.x.
+        Что означает, в том примере, где снаряд летит по ч = 4, он попадает
+        в танк только если какой-нибудь из блоков танка находится в позиции
+        x = 3 или x = 4. В противном случае, снаряд в танк не попадает (рис4)
      */
 
     /**
