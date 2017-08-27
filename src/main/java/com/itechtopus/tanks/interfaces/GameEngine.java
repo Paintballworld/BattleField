@@ -1,22 +1,17 @@
 package com.itechtopus.tanks.interfaces;
 
+import com.itechtopus.tanks.interfaces.field.Field;
+
 import java.util.List;
 
 public interface GameEngine {
 
     /**
      * Method to get a list of TankInfo's
-     * representing tanks which are yet alive
+     * representing enemy tanks which are yet alive
      * @return a list of all tanks
      */
-    List<TankInfo> getAllTankInfo();
-
-    /**
-     * Method to get a list of id's
-     * representing enemy's tanks which are yet alive
-     * @return a list of Integer values
-     */
-    List<Integer> getEnemyIdList();
+    List<TankInfo> getEnemyInfo();
 
     /**
      * Method to get a link to a game Field
@@ -24,5 +19,10 @@ public interface GameEngine {
      */
     Field getField();
 
+    /**
+     * An int value of player count in a field
+     * @return positive int value
+     */
+    int getPlayerCount();
 
 }

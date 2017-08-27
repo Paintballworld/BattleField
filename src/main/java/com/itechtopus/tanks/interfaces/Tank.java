@@ -1,9 +1,10 @@
 package com.itechtopus.tanks.interfaces;
 
 import com.itechtopus.tanks.interfaces.models.Direction;
+import com.itechtopus.tanks.interfaces.models.MovingModel;
 import com.itechtopus.tanks.interfaces.models.Position;
 
-public interface Tank {
+public interface Tank extends MovingModel{
 
     /**
      * Method to fire
@@ -18,7 +19,8 @@ public interface Tank {
 
     /**
      * To turn into a passed direction
-     * @param direction - direction to turn to
+     * @param direction - absolute (not relative)
+     *                  direction to turn to
      */
     void turn(Direction direction);
 
@@ -52,29 +54,10 @@ public interface Tank {
     void stop();
 
     /**
-     * To get current coordinates and direction of the tank
-     * @return the Position of the tank
-     */
-    Position getPosition();
-
-    /**
-     * To get current direction of the tank
-     * @return the Direction of the tank
-     */
-    Direction getDirection();
-
-    /**
      * To get a value, which represents a health of the tank
      * @return int value of health
      */
     int getHealth();
-
-    /**
-     * To find ut if tank is able to move to passed direction
-     * @param direction - direction to check
-     * @return true if road is open and false if not
-     */
-    boolean canGo(Direction direction);
 
     /**
      * @return true if tank is alive and false if not

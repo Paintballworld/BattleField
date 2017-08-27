@@ -1,10 +1,9 @@
 package com.itechtopus.tanks.impl;
 
-import com.itechtopus.tanks.interfaces.Field;
+import com.itechtopus.tanks.interfaces.field.Field;
 import com.itechtopus.tanks.interfaces.GameEngine;
 import com.itechtopus.tanks.interfaces.Tank;
 import com.itechtopus.tanks.interfaces.Tanker;
-import com.itechtopus.tanks.interfaces.models.Direction;
 
 import java.util.Random;
 
@@ -79,8 +78,8 @@ public class MyTanker implements Tanker {
                 tank.fire();
             }
 
-            if (field.getCellstrength(tank.getPosition().getPositionAhead()) > 0 )
-                tank.fire();
+           /* if (field.getCellStrength(tank.getPosition().getPositionAhead()) > 0 )
+                tank.fire();*/
         }
     }
 }
