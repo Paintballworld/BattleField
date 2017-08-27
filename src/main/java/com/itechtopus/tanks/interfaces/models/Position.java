@@ -119,5 +119,14 @@ public interface Position {
      */
     int getMaxY();
 
+    /**
+     * @return a middle point of Model
+     */
+    Point getMiddlePoint();
+
+    /**
+     * @return a Point of next step towards current direction
+     */
+    Point next();
 
 }

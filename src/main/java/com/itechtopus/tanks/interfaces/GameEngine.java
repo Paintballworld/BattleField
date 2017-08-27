@@ -20,9 +20,10 @@ public interface GameEngine {
     Field getField();
 
     /**
-     * An int value of player count in a field
-     * @return positive int value
+     * To get a value of the current score
+     * @param player - Tanker instance (must be "this");
+     * @return an int value, representing a number of
+     * player remaining lives
      */
-    int getPlayerCount();
-
+    int getPlayerLifesLeft(Tanker player);
 }

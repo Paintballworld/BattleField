@@ -17,11 +17,30 @@ public interface TankInfo {
      */
     Direction getDirection();
 
-    boolean isMoving(int tankId);
+    /**
+     * @return true if Tank, which is represented by this Tank info
+     * is moving and false if it is not
+     */
+    boolean isMoving();
 
-    boolean isShooting(int tankId);
+    /**
+     * @return true if Tank, which is represented by this Tank info
+     * is shooting and false if it is not.
+     * When the ammo of the tank is currently flying - it is
+     * considered as tank is shooting
+     */
+    boolean isShooting();
 
-    int getHealth(int tankId);
+    /**
+     * @return Direction of the Tank is shooting to, or null
+     * if tank doesn't shoot at the time
+     */
+    Direction getShootingDirection();
 
+    /**
+     * Returns the Health of a tank
+     * @return int value of the tank's heals
+     */
+    int getHealth();
 
 }

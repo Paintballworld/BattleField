@@ -1,9 +1,6 @@
 package com.itechtopus.tanks.interfaces.field;
 
-import com.itechtopus.tanks.interfaces.models.BlockType;
-import com.itechtopus.tanks.interfaces.models.Direction;
-import com.itechtopus.tanks.interfaces.models.MovingModel;
-import com.itechtopus.tanks.interfaces.models.Position;
+import com.itechtopus.tanks.interfaces.models.*;
 
 public interface Field {
 
@@ -28,6 +25,14 @@ public interface Field {
      * @return a BlockType or null, if there is not block
      */
     BlockType getBlockAt(int x, int y);
+
+    /**
+     * Will return a block type, which is located in the
+     * point at (point.getX(), point.getY())
+     * @param point - point
+     * @return BlockType or null, if block is empty
+     */
+    BlockType getBlockAt(Point point);
 
     /**
      * Returns a position, representing location of a flag

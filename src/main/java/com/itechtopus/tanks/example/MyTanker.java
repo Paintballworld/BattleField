@@ -78,8 +78,8 @@ public class MyTanker implements Tanker {
                 tank.fire();
             }
 
-           /* if (field.getCellStrength(tank.getPosition().getPositionAhead()) > 0 )
-                tank.fire();*/
+            if (field.getBlockAt(field.getFarthestPositionFor(tank).next()) != null)
+                tank.fire();
         }
     }
 }
