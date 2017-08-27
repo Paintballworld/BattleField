@@ -64,21 +64,4 @@ public interface Tank extends MovingModel{
      */
     boolean isAlive();
 
-
-    /**
-     * Get the farthest position which this tank can go
-     * @return a Position instance, which shows a maximum
-     * position that this tank could get, moving to current direction
-     */
-    Position getFarthestPosition();
-
-    /**
-     * Return a Position of hypothetical movement to passed direction
-     * THIS coordinates are not mentioned to change
-     * @return a Position instance, which shows a maximum
-     * position that this tank could get, moving to given direction
-     */
-    Position getFarthestPosition(Direction direction);
-
-
 }

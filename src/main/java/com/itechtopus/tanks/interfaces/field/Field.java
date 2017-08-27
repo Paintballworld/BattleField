@@ -1,6 +1,8 @@
 package com.itechtopus.tanks.interfaces.field;
 
 import com.itechtopus.tanks.interfaces.models.BlockType;
+import com.itechtopus.tanks.interfaces.models.Direction;
+import com.itechtopus.tanks.interfaces.models.MovingModel;
 import com.itechtopus.tanks.interfaces.models.Position;
 
 public interface Field {
@@ -40,6 +42,23 @@ public interface Field {
      * @return an matrix of BlockTypes
      */
     BlockType[][] getAllBlocks();
+
+    /**
+     * Get the farthest position which given model can go
+     * @return a Position instance, which shows a maximum
+     * position that this model could get, moving to current direction
+     * Position of the model is not changing
+     */
+    Position getFarthestPositionFor(MovingModel model);
+
+    /**
+     * Return a Position of hypothetical movement to passed direction
+     * model's coordinates are not mentioned to change
+     * @return a Position instance, which shows a maximum
+     * position that this tank could get, moving to given direction
+     */
+    Position getFarthestPositionFor(MovingModel model, Direction direction);
+
 
 
 }
