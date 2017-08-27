@@ -20,7 +20,7 @@ public interface Position {
          The Position (as a class) holds an information of all
          blocks which the object is built of, considering NOT only
          upper-left coordinates of blocks. For example:
-         If a tank's coordinates are (4, 3) (pic 1), then it's "body" is located
+         If the coordinates of tank's center are (4, 3) (pic 1), then it's "body" is located
          from 2 up to 6 (!) on X axis, and from 1 to 5 (!) by the y
          axis. Because the tank is represented by a matrix of 4*4 blocks
          Leftmost block is in coordinates (2, 1) and bottom right corner
@@ -58,7 +58,7 @@ public interface Position {
         Позиция (как класс) содержит информацию о расположении всех блоков
         из которых построен объект, учитывая НЕ только левые-верхние точки
         блоков. Напрмимер:
-        Если координаты самого танка (4, 3) (рис 1), то его "тело" расположено
+        Если координаты центра танка (4, 3) (рис 1), то его "тело" расположено
         со 2-й по 6 (!) позицию по оси X и с 1-ой по 5-ую позицию по
         оси Y. Потому что танк представлен ввиду матрицы 4*4 блоков, самый
         верхний-левый из которых имеет координаты (2, 1), а правый нижний блок
