@@ -21,4 +21,13 @@ public interface MovingModel {
      * @return true if two models are colliding and false if not
      */
     boolean collidesWith(Position target);
+
+
+    /**
+     * To get if current model is collides with one, which
+     * is passed as a parameter
+     * @param target - a object to collide
+     * @return true if two models are colliding and false if not
+     */
+    boolean coolidesWith(MovingModel target);
 }

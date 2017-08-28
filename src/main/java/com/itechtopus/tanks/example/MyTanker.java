@@ -6,6 +6,7 @@ import com.itechtopus.tanks.interfaces.Tank;
 import com.itechtopus.tanks.interfaces.Tanker;
 
 import java.util.Random;
+import java.util.stream.Stream;
 
 public class MyTanker implements Tanker {
 
@@ -78,7 +79,7 @@ public class MyTanker implements Tanker {
                 tank.fire();
             }
 
-            if (field.getBlockAt(field.getFarthestPositionFor(tank).next()) != null)
+            if (!field.deadEnd() && Stream.of(field.getBlocksAhead()).filter(o -> o != null).count() > 0)
                 tank.fire();
         }
     }

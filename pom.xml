@@ -2,11 +2,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.itechtopus.tanks</groupId>
-    <artifactId>BattleFieldInterfaces</artifactId>
+    <artifactId>BattleFieldAPI</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>BattleFieldInterfaces</name>
+    <name>BattleFieldAPI</name>
     <description>A initial version of a project for developing an AI for old game</description>
     <url>http://itecthopus.com/tanks</url>
     <licenses>

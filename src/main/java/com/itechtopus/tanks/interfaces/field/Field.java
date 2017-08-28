@@ -35,12 +35,13 @@ public interface Field {
     BlockType getBlockAt(Point point);
 
     /**
-     * Returns a position, representing location of a flag
-     * of team according to teamId
-     * @param tankId - id of team, which flag is requesting
-     * @return a position of the flag
+     * Will return an array of blockTypes that are located
+     * right in front of the tank towards its current direction.
+     * From left to right, or from top to the bottom
+     * @return an BlockType array, considering that if a block is empty
+     * array value of this block will be null
      */
-    Position getFlagPosition(int tankId);
+    BlockType[] getBlocksAhead();
 
     /**
      * Returns an array of BlockTypes of all field
@@ -49,20 +50,42 @@ public interface Field {
     BlockType[][] getAllBlocks();
 
     /**
-     * Get the farthest position which given model can go
+     * Returns a position, representing location of a flag
+     * of team according to teamId
+     * @param tankId - id of team, which flag is requesting
+     * @return a position of the flag
+     */
+    Position getFlagPosition(int tankId);
+
+    /**
+     * Get the farthest position which tank can go
      * @return a Position instance, which shows a maximum
-     * position that this model could get, moving to current direction
+     * position that this tank could get, moving to current direction
      * Position of the model is not changing
      */
-    Position getFarthestPositionFor(MovingModel model);
+    Position getFarthestPosition();
 
     /**
      * Return a Position of hypothetical movement to passed direction
-     * model's coordinates are not mentioned to change
+     * tank's coordinates are not mentioned to change
      * @return a Position instance, which shows a maximum
      * position that this tank could get, moving to given direction
      */
-    Position getFarthestPositionFor(MovingModel model, Direction direction);
+    Position getFarthestPosition(Direction direction);
+
+    /**
+     * In order to find if current tank is in that position
+     * from where it can not move any further towards current direction
+     * @return true if tank can not move further and false if it can
+     *
+     * It is necessary to understand, that solid block ahead, means that
+     * tank is not able to go further and it is the dead end.
+     *
+     * Brick walls are not dead ends.
+     */
+    boolean deadEnd();
+
+
 
 
 
